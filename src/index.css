@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+:root { 
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body{
+  background-color: #181818;
+  width: 100%;
+  overflow-x: hidden;
+}
+/* The navigation bar */
+
+.navbar{
+  background-color: #181818;
+  color: white;
+  width: 100vw;
+  height: 10%;
+  padding: 5px 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.nav-logo{
+  width: 100px;
+  margin-right: 56px;
+}
+
+.nav-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: circle;
+}
+
+.nav-list li{
+  margin-right: 50px;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.nav-list a{
+  text-decoration: none;
+}
+
+.nav-list a:visited, .nav-list a:link{
+  color: #fff;
+}
+
+.nav-list li:hover{
+  cursor: pointer;
+  color: #ccc;
+  list-style-type: disc;
+}
+
+.more, .nav-list-phone{
+  display: none;
+}
+
+/* The introduction section */
+
+.intro-section{
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.presentation{
+  color: #fff;
+}
+
+.slogan{
+  width: 300px;
+}
+
+.slogan p{
+  width: 250px;
+  display: inline-block;
+  z-index: 1;
+  line-height: 150%;
+  letter-spacing: 4%;
+}
+
+.intro-image{
+  width: 500px;
+  z-index: 0;
+}
+
+.years{
+  font-size: 42px;
+  width: 600px;
+  z-index: 1;
+}
+
+.years label{
+  color: #FE7525;
+}
+
+/* Partners section */
+
+.partners-section{
+  width: 100vw;
+}
+
+.partners-section fieldset, .services-section fieldset{ /* This line also concernes the services section */
+  background-color: #0E0E0E;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.partners-section fieldset legend, .services-section fieldset legend{ /* This piece of code alters the services section as well to avoid redundance*/
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 4%;
+  
+}
+
+.partners-logos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.partners-section .partners-logos img{
+  height: 100px;
+}
+
+/* The services section */
+
+.services-section{
+  width: 100vw;
+}
+
+.services{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.service{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition:  0.1s linear;
+}
+
+.service:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.service label{
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.service-image{
+  width: 170px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 9; /* Ensure the overlay is on top */
+}
+
+.dialog{
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 400px;
+  background-color: #0E0E0E;
+  color: #fff;
+  z-index: 10 !important;
+  text-align: center;
+  padding: 7px 10px;
+  overflow: hidden;
+}
+
+.dialog h2{
+  margin-bottom: 10px;
+}
+
+.dialog-gallery{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 25px 10px;
+  gap: 10px;
+  overflow: scroll;
+}
+
+.dialog-gallery img{
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* This is the why about section */
+
+.why-about-section{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.why, .about{
+  display: flex;
+  width: 70%;
+  align-items: center;
+  padding: 7px;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.why-about-section img{
+  z-index: 0;
+  width: 50%;
+}
+
+.why-about-section h2{
+  color: #fff;
+  font-weight: bold;
+  font-size: 28px;
+  font-weight: 200;
+}
+
+.why-about-section h1{
+  font-size: 48px;
+  position: relative;
+  z-index: -1;
+  top: 30px;
+  color: #5A5A5A;
+  font-weight: 400;
+  right: 20px;
+}
+
+.about div{
+  text-align: center;
+  margin-left: 70px;
+}
+
+.about div h2{
+  text-align: left;
+  width: 250px;
+}
+
+.why-about-section p{
+  color: #B1B1B1;
+  margin-top: 15px;
+  margin-left: 8px;
+  font-size: 0.8rem;
+}
+
+.contact-us{
+  background-color: #FE7525;
+  margin: 15px;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  padding: 7px 4px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.contact-us:hover{
+  background-color: #fe7525c3;
+  color: #ccc;
+}
+
+/* The digital Solution Section */
+
+.digital-solution-section{
+  background-color: #0E0E0E;
+  width: 100vw;
+  padding: 10px 0;
+  color: #fff;
+  height: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.digital-solution-text-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.digital-image{
+  width: 500px;
+}
+
+.digital-solutions{
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  width: 500px;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.digital-solutions img{
+  width: 200px;
+  margin-right: 30px;
+}
+
+.digital-description{
+  width: 300px;
+  font-size: 12px;
+  line-height: 20px;
+  z-index: 1;
+}
+
+.experience, .projects{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 50px;
+  z-index: 1;
+}
+
+.experience h1, .projects h1{
+  color: #FE7525;
+  font-size: 62px;
+}
+
+.experience p, .projects p{
+  font-size: 12px;
+}
+
+.experience-projects{
+  display: flex;
+  gap: 100px;
+}
+
+/* The Testimonials Section */
+
+.testimonials-section{
+  width: 100vw;
+  margin-bottom: 40px;
+}
+
+.legend{
+  color: #fff;
+  position: relative;
+  top: 25%;
+  left: 20%;
+}
+
+.legend p{
+  color: #FE7525;
+  font-size: 14px;
+}
+
+.testimonials{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 0;
+  padding: 5px 10px;
+}
+
+.testimonial{
+  height: 7%;
+  width: 200px;
+  padding: 30px 7px;
+  background-color: #0E0E0E;
+  text-align: center;
+  color: #fff;
+  line-height: 15px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.testimonial .client{
+  position: relative;
+  top: 80px;
+  object-fit: cover;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.testimonial label{
+  position: relative;
+  top: 85px;
+  text-align: center;
+}
+
+.testimonial p{
+  width: 80%;
+}
+
+.testimonial .grading{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 2px;
+  position: relative;
+  top: 40px;
+}
+
+.testimonial .grading img{
+  width: 15px;
+}
+
+/* This is the Discussion Section */
+
+.discussion-section{
+  width: 100vw;
+  text-align: center;
+
+}
+
+.discussion-section h1{
+  margin-bottom: 50px;
+  font-size: 42px;
+  color: #fff;
+}
+
+.discussion-section h1 label{
+  color: #FE7525;
+}
+
+/* This is The Footer Section */
+
+.footer img{
+  width: 127px;
+  height: 127px;
+}
+
+.footer{
+  width: 100vw;
+  background-color: #0E0E0E;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 5px;
+}
+
+.footer ul li{
+  list-style: none;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.footer h3{
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.footer .footer-contact p{
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+/* This is the Copyright Section */
+
+.copyright-section{
+  width: 100vw;
+  height: 100px;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: 12px;
+}
+
+.copyright-section div{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  bottom: 15px;
+}
+
+.copyright-section div img{
+  width: 15px;
+  margin: 4px;
+}
+
+/* The modifications for the mobile version */
+
+@media only screen and (max-width: 600px){
+  .services, .partners-logos{
+    flex-direction: column;
+  }
+
+  .about, .why{
+    flex-direction: column;
+  }
+
+  .about{
+    flex-direction: column-reverse;
+
+  }
+
+  .about img, .why img{
+    width: 100%;
+  }
+
+  .about button{
+    display: none;
+  }
+
+  .digital-solutions{
+    width: 100%;
+    text-align: center;
+  }
+
+  .digital-image{
+    display: none;
+  }
+
+  .footer p{
+    width: 70%;
+    line-height: 25px;
+  }
+
+  .footer{
+    justify-content: space-between;
+  }
+  
+  .testimonial p{
+    width: 100%;    
+  }
+
+  .nav-list{
+    display: none;
+  }
+
+  .more{
+    display: block;
+    width: 45px;
+    cursor: pointer;
+  }
+  
+  .nav-list-phone{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+    height: 60vh;
+    transition: 1s linear;
+  }
+
+  .nav-list-phone a{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+  }
+
+  .nav-list-phone a li, .nav-list-phone a li:hover{
+    list-style: none;
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .navbar{
+    flex-wrap: wrap;
+  }
+
+  .hide-nav-list-phone{
+    display: none;
+  }
+
+  .intro-image, .slogan img{
+    display: none;
+  }
+
+  .intro-section h1{
+    width: 400px;
+  }
+
+  .presentation{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .presentation p{
+    font-size: 22px;
+    margin-top: 15px;
+  }
+
+  .services-section{
+    margin-top: 50px;
+  }
+
+  .service{
+    width: 70vw;
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+
+  .service .service-image{
+    width: 60%;
+    height: 300px;
+  }
+
+  .testimonials{
+    flex-direction: column;
+  }
+
+  .testimonial{
+    margin-bottom: 120px;
+    width: 80%;
+    height: 360px;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 15px;
+  }
+
+  .testimonial .client{
+    width: 120px;
+    height: 120px;
+    top: 100px;
+    margin-bottom: 20px;
+  }
+
+  .discussion-section{
+    padding: 0 30px;
+  }
+
+  .footer div, .footer img{
+    margin-bottom: 45px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .footer{
+    flex-direction: column;
+  }
+  .footer h3{
+    font-size: 36px;
+  }
+
+  .footer ul li, .footer .footer-contact p{
+    font-size: 16px;
+  }
+}
