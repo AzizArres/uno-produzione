@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import Image from "/src/assets/414975469_7416746245011270_7345777425799124077_n.png"
 export default function Navbar(){
     const [phoneDisplay, setPhoneDisplay] = useState(true)
     function togglePhoneDisplay(){
@@ -12,7 +13,7 @@ export default function Navbar(){
     }
     return(
         <div className="navbar">
-            <a href="#intro"><img src={"/src/assets/414975469_7416746245011270_7345777425799124077_n.png"} className="nav-logo"/></a>
+            <a href="#intro"><img src={Image} className="nav-logo"/></a>
             <ul className="nav-list">
                 <a href="#intro"><li>Home</li></a>
                 <a href="#projects"><li>Projects</li></a>
