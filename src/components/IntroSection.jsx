@@ -1,5 +1,5 @@
 import React from "react"
-import Image1 from "src/assets/Mask goup 1.png"
+import Image1 from "src/assets/Mask goup1.png"
 import Image2 from "src/assets/Mask group.png"
 export default function IntroSection(){
     return(
