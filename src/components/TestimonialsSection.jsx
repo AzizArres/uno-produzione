@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unescaped-entities */
 import React from "react"
 import Client from "/src/components/subComponents/Client.jsx"
 export default function TestimonialsSection(){

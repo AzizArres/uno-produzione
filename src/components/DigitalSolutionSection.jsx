@@ -1,10 +1,14 @@
+/* eslint-disable no-unused-vars */
 import React from "react"
+import maskGroup3 from "/src/assets/mask group 3.png"
+import maskGroup2 from "/src/assets/Mask group 2.png"
+
 export default function DigitalSolutionSection(){
     return(
         <div className="digital-solution-section">
             <div className="digital-solution-text-box">
                 <div className="digital-solutions">
-                    <img src="src/assets/mask group 3.png" alt="" />
+                    <img src={maskGroup3} alt="" />
                     <h1>DIGITAL</h1>
                     <h1>SOLUTIONS</h1>
                 </div>
@@ -23,7 +27,7 @@ export default function DigitalSolutionSection(){
                     </div>
                 </div>
             </div>
-            <img src="src/assets/mask group 2.png" alt="" className="digital-image"/>
+            <img src={maskGroup2} alt="" className="digital-image"/>
         </div>
     )
 }

@@ -1,8 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React from "react"
+import img from "/src/assets/414975469_7416746245011270_7345777425799124077_n.png"
+
 export default function Footer(){
     return(
         <div className="footer">
-            <img src="src/assets/414975469_7416746245011270_7345777425799124077_n.png" alt="" />
+            <img src={img} alt="" />
             <div className="footer-services">
                 <h3>Services</h3>
                 <ul>
