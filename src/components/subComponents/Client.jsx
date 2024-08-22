@@ -1,11 +1,14 @@
+/* eslint-disable no-unused-vars */
 import React from "react"
 import ClientsData from "/src/data/ClientsData.js"
+import star from "/src/assets/star.png"
+
 export default function Client(){
     function starCount(n){
         let myArray = []
         for(let i=0; i<n; i++){
             myArray.push(
-                <img src="src/assets/star.png" alt="star image"/>
+                <img src={star} alt="star image"/>
             )
         }
         return(myArray)

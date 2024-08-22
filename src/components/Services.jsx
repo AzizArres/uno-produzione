@@ -10,6 +10,7 @@ import minh from "/src/assets/minh-pham-MBsReSZ2WNM-unsplash.jpg"
 
 export default function Services(){
     const [openEvents, setOpenEvents] = useState(false)
+
     function toggleOpenEvents(){
         setOpenEvents(prevOpenEvents => !prevOpenEvents)
     }
@@ -41,37 +42,28 @@ export default function Services(){
                     <div className="service" onClick={toggleOpenEvents}>
                         <img src={priscilla} className="service-image" />
                         <label>Events</label>
-                        {
-                            openEvents && <DialogWindow title="Events" images={Data.Events}/>
-                        }
+                        <DialogWindow open={openEvents} title="Events" images={Data.Events}/>
                     </div>
                     <div className="service" onClick={toggleOpenWedding}>
                         <img src={samantha} className="service-image"/>
                         <label>Wedding</label>
-                        {
-                            openWedding && <DialogWindow title="Wedding" images={Data.Wedding} />
-                        }
+                        <DialogWindow open={openWedding} title="Wedding" images={Data.Wedding} />
                     </div>
                     <div className="service" onClick={toggleOpenVideoEditing}>
                         <img src={oguz} className="service-image" />
                         <label>Video Editing</label>
-                        {
-                            openVideoEditing && <DialogWindow title="Video Editing" images={Data.VideoEditing} />
-                        }
+                        <DialogWindow open={openVideoEditing} title="Video Editing" images={Data.VideoEditing} />
                     </div>
                     <div className="service" onClick={toggleOpenShooting}>
                         <img src={jan} className="service-image" />
                         <label>Shooting</label>
-                        {
-                            openShooting && <DialogWindow title="Shooting" images={Data.Shooting} />
-                        }
+                        <DialogWindow open={openShooting} title="Shooting" images={Data.Shooting} />
+                        
                     </div>
                     <div className="service" onClick={toggleOpenDesignAndDecoration}>
                         <img src={minh} className="service-image"/>
                         <label>Design & Decoration</label>
-                        {
-                            openDesignAndDecoration && <DialogWindow title="Design & Decoration" images={Data.DesignAndDecoration} />
-                        }
+                        <DialogWindow open={openDesignAndDecoration} title="Design & Decoration" images={Data.DesignAndDecoration} />
                     </div>
                 </div>
             </fieldset>

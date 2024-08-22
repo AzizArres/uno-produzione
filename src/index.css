@@ -25,7 +25,6 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 2;
 }
 
 .nav-logo{
@@ -64,10 +63,6 @@ body{
   list-style-type: disc;
 }
 
-.more, .nav-list-phone{
-  display: none;
-}
-
 /* The introduction section */
 
 .intro-section{
@@ -89,20 +84,17 @@ body{
 .slogan p{
   width: 250px;
   display: inline-block;
-  z-index: 1;
   line-height: 150%;
   letter-spacing: 4%;
 }
 
 .intro-image{
   width: 500px;
-  z-index: 0;
 }
 
 .years{
   font-size: 42px;
   width: 600px;
-  z-index: 1;
 }
 
 .years label{
@@ -192,8 +184,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  z-index: 9; /* Ensure the overlay is on top */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black *//* Ensure the overlay is on top */
 }
 
 .dialog{
@@ -201,17 +192,16 @@ body{
   top: 10%;
   left: 10%;
   width: 80%;
-  height: 400px;
+  max-height: 500px;
   background-color: #0E0E0E;
   color: #fff;
-  z-index: 10 !important;
   text-align: center;
   padding: 7px 10px;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .dialog h2{
-  margin-bottom: 10px;
+  margin: 20px 0;
 }
 
 .dialog-gallery{
@@ -222,7 +212,7 @@ body{
   flex-wrap: wrap;
   padding: 25px 10px;
   gap: 10px;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .dialog-gallery img{
@@ -240,7 +230,6 @@ body{
   gap: 30px;
   align-items: center;
   width: 100%;
-  z-index: 1;
 }
 
 .why, .about{
@@ -253,7 +242,6 @@ body{
 }
 
 .why-about-section img{
-  z-index: 0;
   width: 50%;
 }
 
@@ -267,7 +255,6 @@ body{
 .why-about-section h1{
   font-size: 48px;
   position: relative;
-  z-index: -1;
   top: 30px;
   color: #5A5A5A;
   font-weight: 400;
@@ -337,7 +324,6 @@ body{
   align-items: center;
   font-size: 32px;
   width: 500px;
-  z-index: 1;
   flex-wrap: wrap;
 }
 
@@ -350,7 +336,6 @@ body{
   width: 300px;
   font-size: 12px;
   line-height: 20px;
-  z-index: 1;
 }
 
 .experience, .projects{
@@ -358,7 +343,6 @@ body{
   align-items: center;
   gap: 15px;
   width: 50px;
-  z-index: 1;
 }
 
 .experience h1, .projects h1{
@@ -530,6 +514,42 @@ body{
   margin: 4px;
 }
 
+.navbar-phone{
+  display: flex;
+  padding: 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-phone .nav-list-phone{
+  width: 100%;
+  transform: linear 2s;
+}
+
+.navbar-phone .nav-list-phone > a{
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar-phone .nav-list-phone > a:hover{
+  color: #ccc;
+}
+
+.navbar-phone .nav-list-phone li{
+  list-style: none;
+  margin: 40px 0;
+  text-align: left;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.more {
+  width: 50px;
+  height: 50px;
+}
+
 /* The modifications for the mobile version */
 
 @media only screen and (max-width: 600px){
@@ -576,46 +596,10 @@ body{
     width: 100%;    
   }
 
-  .nav-list{
-    display: none;
-  }
-
   .more{
     display: block;
     width: 45px;
     cursor: pointer;
-  }
-  
-  .nav-list-phone{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    margin-top: 30px;
-    height: 60vh;
-    transition: 1s linear;
-  }
-
-  .nav-list-phone a{
-    width: 100%;
-    text-align: center;
-    height: 30px;
-  }
-
-  .nav-list-phone a li, .nav-list-phone a li:hover{
-    list-style: none;
-    width: 100%;
-    font-size: 24px;
-  }
-
-  .navbar{
-    flex-wrap: wrap;
-  }
-
-  .hide-nav-list-phone{
-    display: none;
   }
 
   .intro-image, .slogan img{
